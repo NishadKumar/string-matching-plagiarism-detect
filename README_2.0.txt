@@ -1,0 +1,13 @@
+README
+
+included:
+All source files (.java)
+this README
+
+————————————————————————————————————————————————————————————————————————————————————————
+Design and Analysis of Algorithms Project
+
+Implementing plagiarism detector using string matching algorithms, because of the following reasons: string matching algorithms are widely used in various applications. It is also widely used is plagiarism detection.  There are numbers of algorithms are known to exist to solve string matching problem. The most basic algorithm was brute force algorithm where the pattern is compared with the collection of texts, one character at a time, until matching characters are found. For algorithm development we consider its complexity. This method might go up to the end of text files and after that can detect the pattern was not there. Different algorithms, which are more accurate in finding the occurrences, are explained below.————————————————————————————————————————————————————————————————————————————————————————ALGORITHMS USED:1.LCSS:
+i.These two operations comprise all the steps necessary for LCSS algorithm. We can build a matrix out of these formulas and deduce what can be a longest common subsequence between given pattern and text.ii.	Time complexity: O(mn) and space complexity: minO(m,n)————————————————————————————————————————————————————————————————————————————————————————2.NAÏVEi.  It simply test all possible placement of pattern p[1,2,..,n] relative to the text T[1,2,..,m].Shift s=0,1,..,m-n, successively and after each shift . Compare T[s+1,.., s+n] to P[1,2,..,s+m]. It acts like sliding window. ii.  For very short pattern this is preferable.iii. Time complexity O(mn)————————————————————————————————————————————————————————————————————————————————————————3.KMPi.	For binary strings this is recommended.ii.	Time Complexity :O(m+n)
+
+————————————————————————————————————————————————————————————————————————————————————————4. BOYER MOORE:i.	The working is as follows: Scanning characters of pattern from right to left . During testing of pattern P against text T, if a mismatch occurs at T[i] =k with the corresponding pattern character P[j] , if c is not present in the text then we will shift pattern p completely past T[i]. Else we will shift P until occurrence of character c in P gets aligned with T[i]ii.	For large alphabets and natural language search can be handled effectively through these method.iii.	Time complexity: O(m+n)
